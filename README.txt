@@ -12,7 +12,8 @@
 
 
 -Download the folder
--Do chmod +x /Doswebsitehammer/Doswebsite.sh
+-Do chmod +x /Doswebsite.sh
+-Do chmod+x /hammer.py
 -Run ./Doswebsite.sh in the folder to launch it  
 
 
