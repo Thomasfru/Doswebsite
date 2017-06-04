@@ -109,8 +109,6 @@ echo ""
 
 sleep 1
 
-cd Hammer/
-
 if [ $turbo = "y" ]
 then
  
