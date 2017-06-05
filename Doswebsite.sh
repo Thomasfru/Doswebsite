@@ -35,6 +35,26 @@ sleep 1.5
 	# DEBUT
 
 
+while [ -z $yourip ] || [[ $yourip != 'n' && $yourip != 'y' ]]
+	do
+		echo -e "\033[0m"
+		read -p 'Do you want to see your Ip for testing? (y/n): ' yourip
+		echo -e "\a"	
+	done
+
+if [ $yourip = "y" ] 
+	then
+
+	echo "################################################"
+	wget -q www.monip.org -O -  | iconv -f iso8859-1 -t utf8 | sed -nre 's/^.* (([0-9]{1,3}\.){3}[0-9]{1,3}).*$/\1/p'
+	echo ""
+	echo "################################################"
+
+
+fi	
+
+echo ""
+sleep 0.35
 
 while [ -z $ip ]
 	do
@@ -108,6 +128,8 @@ echo ""
 	#Attaque
 
 sleep 1
+
+cd Hammer/
 
 if [ $turbo = "y" ]
 then
