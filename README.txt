@@ -23,4 +23,4 @@
 ##### Changelog ######
 
 -28 may, 2017: Creation of this software
-
+-6 june, 2017: Addition of the function "Your Ip" wich can find the client Ip and propse to test it
