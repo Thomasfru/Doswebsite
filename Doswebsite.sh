@@ -42,6 +42,7 @@ while [ -z $yourip ] || [[ $yourip != 'n' && $yourip != 'y' ]]
 		echo -e "\a"	
 	done
 
+
 if [ $yourip = "y" ] 
 	then
 
@@ -52,6 +53,28 @@ if [ $yourip = "y" ]
 
 
 fi	
+
+
+while [ -z $ipaddr ] || [[ $ipaddr  != 'y' && $ipaddr  != 'n' ]]
+	do
+		echo -e "\033[0m"
+		read -p 'Do you want to use ping service for target ip? (y/n): ' ipaddr
+		echo -e "\a"	
+	done
+
+if [ $ipaddr = "y" ] 
+	then
+
+	echo "################################################"
+	read -p 'Target address wich you want ip: ' turl
+	echo "################################################"
+	echo ""
+	ping $turl -c 1
+	echo ""
+	sleep 0.5
+	echo -e "\033[31mYou have your ip, so copy it\033[0m"
+
+fi
 
 echo ""
 sleep 0.35
@@ -64,6 +87,9 @@ while [ -z $ip ]
 		echo -e "\033[35m################################################"
 		echo -e "\a"	
 	done
+
+
+
 
 sleep 0.2
 
@@ -140,8 +166,4 @@ else
 
 ./hammer.py -s $ip -p $port
 
-fi	
-
-
-
-	
+fi
